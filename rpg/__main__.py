@@ -1,3 +1,5 @@
+from rpg.combat import start_fight
+from rpg.monster import all_monsters
 from rpg.player import Player
 from rpg.vocation import get_vocation
 
@@ -11,20 +13,24 @@ def main():
     player_name = input("What's your name? ")
     player_vocation = get_vocation()
     player = Player(name=player_name, vocation=player_vocation)
+    start_fight(player, all_monsters[0])
 
-
-    # -------- TAREFA, MEU IRMÃO, 4 --------
-    # Criar um novo arquivo chamado combat.py
-    # Nesse arquivo, criar um menu de combat
-    # o menu deve ser simples seguindo o exemplo da função menu() abaixo
-    #
-    # Nesse menu, é esperado que tenha três opções, uma para realizar o attack "físico" (base attack)
-    # outra para realizar o attack com spells (attack_spells)
+    # -------- TAREFA, MEU IRMÃO, 1 --------
     # e por fim, uma opção de passar o turno (sem ação nenhuma por hora (NOOP))
     # como alternativa, pode seguir o exemplo da opção Exit do menu do jogo.
-    
+
+    # -------- TAREFA, MEU IRMÃO, 2 --------
+    # Corrigir os prints do jogo e deixar mais apresentável
+    # todos os prints, T O D O S
+    # T
+    # O
+    # D
+    # O
+    # S
+
     # -------- TAREFA, MEU BROTHER, OPCIONAL --------
     # Lê aí: https://docs.python.org/3/tutorial/classes.html
+    # Lê aqui tb: https://cbea.ms/git-commit/
 
 
 def menu():

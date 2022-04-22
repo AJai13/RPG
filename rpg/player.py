@@ -29,6 +29,8 @@ class Player:
                 print("{idx}. {spell_name}".format(idx=index, spell_name=spell.name))
                 usable_spells.append(index) # Vamos atualizar a lista nessa linha
 
+        print("99. Skip")
+
         final_damage = 0
 
         while True:
@@ -38,18 +40,12 @@ class Player:
                 # Calcular o dano da spell
                 final_damage = self.vocation.spells[choice].damage
 
-                # -------- TAREFA, MEU IRMÃO, 1 --------
-                # Consumir sp da classe 
-                # Sempre diminuir o sp_current subtraindo do sp_cost da spell
-                # Case o sp_current for <= 0, não fazer nada.
-                break
-            else:
-                # Caso o número selecionado não estiver dentro da lista de spells, pular o turno
-                # fazendo com que o player não de dano no inimigo.
-                final_damage = 0
+                self.sp_current -= self.vocation.spells[choice].sp_cost
 
-                # -------- TAREFA, MEU IRMÃO, 2 --------
-                # Incrementar o sp_current da classe em 1 toda vez que nenhuma spell for selecionada.
+            else:
+                self.sp_current += 1
+
+            break
 
         # Retornar o dano causado pela spell
         return final_damage
