@@ -1,3 +1,5 @@
+from rpg.combat import start_fight
+from rpg.monster import all_monsters
 from rpg.player import Player
 from rpg.vocation import get_vocation
 
@@ -11,7 +13,7 @@ def main():
     player_name = input("What's your name? ")
     player_vocation = get_vocation()
     player = Player(name=player_name, vocation=player_vocation)
-
+    start_fight(player, all_monsters[0])
 
     # -------- TAREFA, MEU IRMÃO, 4 --------
     # Criar um novo arquivo chamado combat.py
