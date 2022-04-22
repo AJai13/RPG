@@ -1,5 +1,3 @@
-from rpg.combat import start_fight
-from rpg.monster import all_monsters
 from rpg.player import Player
 from rpg.vocation import get_vocation
 
