@@ -19,9 +19,17 @@ def start_fight(player, monster):
     print("The monster's total hp is: {}".format(monster.hp_total))
     print("Its size is: {}".format(monster.size))
 
-    # TOOD: bugzinho que o jogo nunca acaba, rever na quarta.
-    while not player.dead or not monster.dead:
+    
+    player_win = False
+    
+    while True: 
         # 1 = player e 2 = monster
+        if player.dead: 
+            break
+        if monster.dead:
+            player_win = True
+            break
+
         print("The player's hp is: {}".format(player.hp_current))
         print("The monster's hp is: {}\n".format(monster.hp_current))
 
@@ -43,3 +51,5 @@ def start_fight(player, monster):
 
             monster.change_hp(damage)
             print("Monster took {} damage\n".format(damage))
+    
+    return player_win

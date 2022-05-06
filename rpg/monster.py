@@ -55,6 +55,28 @@ all_monsters = [
         dexterity=12,
         intelligence=5,
         min_damage=1,
+    ),
+    Monster(
+        name="Goblin",
+        challenge_rating=6,
+        size="huge",
+        monster_type="giant",
+        hp_total=100,
+        strenght=10,
+        dexterity=12,
+        intelligence=5,
+        min_damage=1,
+    ),
+    Monster(
+        name="Wolf",
+        challenge_rating=6,
+        size="huge",
+        monster_type="giant",
+        hp_total=100,
+        strenght=16,
+        dexterity=12,
+        intelligence=5,
+        min_damage=1,
     )
 ]
 

@@ -1,3 +1,4 @@
+import random
 from rpg.combat import start_fight
 from rpg.monster import all_monsters
 from rpg.player import Player
@@ -13,12 +14,21 @@ def main():
     player_name = input("What's your name? ")
     player_vocation = get_vocation()
     player = Player(name=player_name, vocation=player_vocation)
-    start_fight(player, all_monsters[0])
+    
+    victory_condition = 5
+    defeated_monsters = 0
+    
+    while defeated_monsters < victory_condition:
+        monster = random.choice(all_monsters)
+        is_winnable = start_fight(player, monster)
+        
+        if not is_winnable:
+            print("You lose")
+            exit(0)
 
-    # -------- TAREFA, MEU IRMÃO, 1 --------
-    # e por fim, uma opção de passar o turno (sem ação nenhuma por hora (NOOP))
-    # como alternativa, pode seguir o exemplo da opção Exit do menu do jogo.
-
+        defeated_monsters += 1
+    print("You win \(シ)/")
+    
     # -------- TAREFA, MEU IRMÃO, 2 --------
     # Corrigir os prints do jogo e deixar mais apresentável
     # todos os prints, T O D O S

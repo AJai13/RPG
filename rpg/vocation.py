@@ -57,6 +57,17 @@ all_vocations = [
         spells=[Spells(name="Fireball", sp_cost=2, damage=10)],
         base_attack=2,
         min_damage=0,
+    ),
+    Vocation(
+        name="Warrior",
+        hp_total=50,
+        sp_total=3,
+        strenght=10,
+        dexterity=7,
+        intelligence=7,
+        spells=[Spells(name="Fireball", sp_cost=2, damage=10)],
+        base_attack=8,
+        min_damage=2,
     )
 ]
 
