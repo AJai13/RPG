@@ -15,7 +15,7 @@ def menu_combat():
     return choice
 
 def start_fight(player, monster):
-    print("The monster to be faced is: {}".format(monster.name))
+    print("\nThe monster to be faced is: {}".format(monster.name))
     print("The monster's total hp is: {}".format(monster.hp_total))
     print("Its size is: {}".format(monster.size))
 
@@ -30,7 +30,7 @@ def start_fight(player, monster):
             player_win = True
             break
 
-        print("The player's hp is: {}".format(player.hp_current))
+        print("\nThe player's hp is: {}".format(player.hp_current))
         print("The monster's hp is: {}\n".format(monster.hp_current))
 
         who_is_attacking = random.randint(1, 2)
@@ -50,6 +50,6 @@ def start_fight(player, monster):
                 damage = player.attack_spells()
 
             monster.change_hp(damage)
-            print("Monster took {} damage\n".format(damage))
+            print("\nMonster took {} damage\n".format(damage))
     
     return player_win

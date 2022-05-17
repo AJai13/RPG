@@ -54,7 +54,7 @@ all_vocations = [
         strenght=5,
         dexterity=6,
         intelligence=15,
-        spells=[Spells(name="Fireball", sp_cost=2, damage=10)],
+        spells=[Spells(name="Claws of the Reaper", sp_cost=2, damage=10)],
         base_attack=2,
         min_damage=0,
     ),
@@ -62,24 +62,24 @@ all_vocations = [
         name="Warrior",
         hp_total=50,
         sp_total=3,
-        strenght=10,
-        dexterity=7,
+        strenght=11,
+        dexterity=13,
         intelligence=7,
-        spells=[Spells(name="Fireball", sp_cost=2, damage=10)],
+        spells=[Spells(name="Swing", sp_cost=2, damage=10)],
         base_attack=8,
         min_damage=2,
     )
 ]
 
 def get_vocation():
-    print("These are the vocations:")
+    print("\nThese are the vocations:")
     for index, vocation in enumerate(all_vocations):
         print("{idx}. {vocation_name}".format(idx=index, vocation_name=vocation.name))
 
     final_vocation = None  # ou ''
 
     while True:
-        choice = int(input("Now choose one: "))
+        choice = int(input("\nNow choose one: "))
         if choice in range(0, len(all_vocations)):
             final_vocation = all_vocations[choice]
             break

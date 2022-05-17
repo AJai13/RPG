@@ -29,19 +29,7 @@ def main():
         defeated_monsters += 1
     print("You win \(シ)/")
     
-    # -------- TAREFA, MEU IRMÃO, 2 --------
-    # Corrigir os prints do jogo e deixar mais apresentável
-    # todos os prints, T O D O S
-    # T
-    # O
-    # D
-    # O
-    # S
-
-    # -------- TAREFA, MEU BROTHER, OPCIONAL --------
-    # Lê aí: https://docs.python.org/3/tutorial/classes.html
-    # Lê aqui tb: https://cbea.ms/git-commit/
-
+   
 
 def menu():
     print("Welcome to the RPG\n")
@@ -50,14 +38,14 @@ def menu():
     print("2. Exit\n")
 
     while True:
-        choice = int(input("Select the number: "))
+        choice = int(input("Select the number:"))
 
         if choice == 2:
             print("Bye bye")
             exit()
 
         if choice == 1:
-            print("Starting the game...\n\n")
+            print("\nStarting the game...\n")
             break
 
         # verificando se a opção do usuário está entre 1 e 2
